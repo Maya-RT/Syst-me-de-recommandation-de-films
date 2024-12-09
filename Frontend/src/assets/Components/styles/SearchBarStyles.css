@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:wght@400;700&display=swap');
+
+.SearchBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.CompleteBar {
+    width: 47%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.BAR {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid #8991a5;
+    display: flex;
+    justify-content: center;
+    height: 45px;
+}
+
+.BAR:hover {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.BAR:focus-within {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline: none;
+}
+.searchingbar {
+    height: 100%;
+    border: none;
+    width: 87%;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    font-family: "Merriweather";
+}
+
+.searchList {
+    margin-top: 2px;
+    width: 300px;
+    z-index: 100;
+    position: fixed;
+    top: 36.25%;
+
+    background-color: #eaeff2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.searchItem {
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+.searchList::-webkit-scrollbar {
+    display: none;
+}
+.searchItem {
+    font-family: "Merriweather", sans-serif;
+    font-size: small;
+}
+.searchList .searchItem {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: "Merriweather";
+    justify-content: center;
+    text-align: center;
+}
+
+.searchItem:hover {
+    background-color: #303030;
+    color: #fff !important;
+}
+
+.search-button {
+    border-color: transparent;
+    background-color: transparent;
+    width: 3.478%;
+    margin: 0;
+    padding: 0;
+}
+.NotFound {
+    font-family: "Merriweather", sans-serif;
+    color: #fff;
+}
+.search-button:active {
+    border-color: #8991a5;
+}
+.fas {
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 760px) {
+    .CompleteBar {
+        width: 400px;
+    }
+    .BAR {
+        width: 400px;
+    }
+}
+
+@media (max-width: 440px) {
+    .CompleteBar {
+        width: 330px;
+    }
+    .BAR {
+        width: 330px;
+    }
+}
