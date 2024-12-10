@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:wght@400;700&display=swap');
 
 .logo {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     margin-top: 10px;
-    margin-bottom: 15px;
     margin-left: 10px;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -38,7 +37,6 @@
 }
 
 .header-btn1 {
-    margin-top: 15px;
     text-decoration: none !important;
     color: #fff !important;
     border-radius: 0.3em;
@@ -55,9 +53,9 @@
 
 .header {
     height: 15%;
-    margin-bottom: 10px;
-    
-   
+    display: flex;
+    align-items:  center;
+    justify-content: space-around;
 }
 
 @media (max-width: 650px) {

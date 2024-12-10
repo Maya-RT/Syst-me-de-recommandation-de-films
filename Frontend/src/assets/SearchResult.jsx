@@ -197,13 +197,7 @@ const SearchResult = () => {
                                         if (member) {
                                             return (
                                             <p key={member.cast_id + member.id}>
-                                                <a
-                                                    href={`https://en.wikipedia.org/wiki/${member.name}`}
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                >
                                                 {member.name}
-                                                </a>
                                             </p>
                                             );
                                         }

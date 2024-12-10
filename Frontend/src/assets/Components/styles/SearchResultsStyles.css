@@ -14,7 +14,7 @@
     font-family: "Merriweather", sans-serif;
 }
 .casting {
-    transition: width 0.5s, height 0.5s;
+    color: white;
     text-decoration: none;
 }
 .casting a {
@@ -31,9 +31,8 @@
 .topTitle-Movie {
     font-weight: 700;
 }
-.casting img:hover {
-    height: 80px;
-    width: 80px;
+.casting :hover {
+    text-decoration: underline;
 }
 .main-img {
     height: 420px;
