@@ -65,8 +65,7 @@ function SearchBar({ movies, placeholder }) {
             </div>
             {notFound ? (
                 <div className="NotFound">
-                    Sorry! The Movie You Searched for is not present in our data
-                    base
+                    Désolé ce film ne se trouve pas dans notre base de données.. essayez un autre!
                 </div>
             ) : null}
             {filteredMovies.length > 0 ? (

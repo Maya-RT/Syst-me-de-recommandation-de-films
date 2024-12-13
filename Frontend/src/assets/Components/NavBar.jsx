@@ -9,7 +9,7 @@ const NavBar = ({ isHome }) => {
             <Link to="/ ">
                 <img src={Logo} className="logo" alt="" />
             </Link>
-            {/* if isHome then the button is the github button else its the home button*/}
+            {/* if isHome then the button is the return button else its the home button*/}
             {isHome ? (
                 <a href="/" className="header-btn1 bouncy">
                     <i className="fas fa-home"></i> Home

@@ -4,39 +4,41 @@
     margin-top: 3%;
     font-family: "Merriweather", sans-serif;
 }
+.row{
+    display: flex;
+    flex-direction: row-reverse;
+}
 .overveiwContent {
     font-size: medium;
 }
 .left-box {
     color: #fff !important;
-    margin: 15px 0;
     padding: 20px;
     font-family: "Merriweather", sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 .casting {
     color: white;
     text-decoration: none;
 }
-.casting a {
-    text-decoration: none;
+.actors_list{
+    display: flex;
+}
+.actors_list p{
+    margin-left: 5px;
 }
 
-.casting img {
-    height: 50px;
-    width: 50px;
-    margin-right: 10px;
-    margin-bottom: 35px;
-    transition: width 0.5s, height 0.5s;
-}
 .topTitle-Movie {
     font-weight: 700;
-}
-.casting :hover {
-    text-decoration: underline;
+    background-color: #000;
+    width: 50%;
 }
 .main-img {
     height: 420px;
-    box-shadow: -4px 4px 5px 0 #000;
+    box-shadow: rgba(0, 0, 0, 0.75) 46px 27px 11px -1px;
+    /* box-shadow: -4px 4px 5px 0 #000; */
 }
 
 .recommendedMovies {

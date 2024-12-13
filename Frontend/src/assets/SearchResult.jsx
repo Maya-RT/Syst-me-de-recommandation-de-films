@@ -190,7 +190,7 @@ const SearchResult = () => {
                                 {director && (
                                     <p><b>Réalisateur:</b> {director}</p>
                                     )}
-
+                                    <div className="actors_list">    
                                 {/* Affiche les noms des acteurs */}
                                     <p>Distribution: </p>
                                     {castMembers.map((member) => {
@@ -203,6 +203,7 @@ const SearchResult = () => {
                                         }
                                         return null;
                                     })}
+                                    </div>
                             </div>
 
                             <div>
@@ -214,7 +215,7 @@ const SearchResult = () => {
                             </div>
                             <div>
                                 <b> Date de sortie: </b>
-                                {" : "} {searchedMovie.release_date}
+                                {"  "} {searchedMovie.release_date}
                             </div>
                             <div>
                                 <b>Genres</b>

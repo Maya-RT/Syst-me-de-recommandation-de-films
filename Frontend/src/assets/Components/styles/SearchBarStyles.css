@@ -20,11 +20,11 @@
     border: 1px solid #8991a5;
     display: flex;
     justify-content: center;
-    height: 45px;
+    height: 55px;
 }
 
 .BAR:hover {
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    box-shadow: 3px 3px 8px 3px #dcdcdc;
 }
 .BAR:focus-within {
     box-shadow: 1px 1px 8px 1px #dcdcdc;
