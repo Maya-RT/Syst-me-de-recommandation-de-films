@@ -8,6 +8,14 @@
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.logo-alt{
+    width: 11rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: none;
+    box-shadow: 0px 0px 65px 50px rgba(255,255,255,1)
+  }
 @keyframes bouncy {
     0% {
         top: 0em;

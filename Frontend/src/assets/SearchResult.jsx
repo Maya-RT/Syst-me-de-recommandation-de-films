@@ -7,7 +7,7 @@ import ReactPlayer from "react-player";
 
 const SearchResult = () => {
     const params = useParams();
-    const apiKey = "api_key=b97316ed479ee4226afefc88d1792909";
+    const apiKey = "api_key=7212cc714eacf62263334b404a1fc587";
     const inputValue = params.id; // retrieving the searched movie name
     const [searchedMovie, setSearchedMovie] = useState({});
     const [recommendedMovies, setRecommendedMovies] = useState([{}]);
@@ -29,11 +29,13 @@ const SearchResult = () => {
     };
     const gotVideo = (data) => {
         if (data.videos && data.videos.results) {
-            const trailer = data.videos.results.find(
-                (vid) => vid.name === "Official Trailer"
+            // Cherche une vidéo avec la langue française
+            const frenchTrailer = data.videos.results.find(
+                (vid) => vid.language === "fr" && vid.name === "Official Trailer"
             );
-
-            setVideoData(trailer ? trailer : data.videos.results[0]);
+    
+            // Si une bande-annonce en français existe, utilise-la
+            setVideoData(frenchTrailer ? frenchTrailer : data.videos.results[0]);
         }
     };
 
@@ -43,7 +45,7 @@ const SearchResult = () => {
         // getting data for each of the recommened movies
         for (let movie of apiData.movies) {
             fetch(
-                `https://api.themoviedb.org/3/search/movie?${apiKey}&query=${movie}`
+                `https://api.themoviedb.org/3/search/movie?${apiKey}&query=${movie}&language=fr`
             ).then((Response) =>
                 Response.json().then((data) =>
                     setRecommendedMovies((recommendedMovies) => [
@@ -80,14 +82,14 @@ const SearchResult = () => {
                 );
 
                 fetch(
-                    `https://api.themoviedb.org/3/movie/${realMovieData.id}?${apiKey}&append_to_response=videos`
+                    `https://api.themoviedb.org/3/movie/${realMovieData.id}?${apiKey}&append_to_response=videos&language=fr`
                 ).then((Response) =>
                     Response.json().then((data) => gotVideo(data))
                 );
             };
             // getting data for the searched movie from tmdb
             fetch(
-                `https://api.themoviedb.org/3/search/movie?${apiKey}&query=${inputValue}`
+                `https://api.themoviedb.org/3/search/movie?${apiKey}&query=${inputValue}&language=fr`
             ).then((Response) =>
                 Response.json().then((data) => gotTMDBData(data))
             );
@@ -97,7 +99,7 @@ const SearchResult = () => {
             );
             // getting the list of all genres
             fetch(
-                `https://api.themoviedb.org/3/genre/movie/list?${apiKey}`
+                `https://api.themoviedb.org/3/genre/movie/list?${apiKey}&language=fr`
             ).then((Response) =>
                 Response.json().then((data) => setGenreList(data.genres))
             );
@@ -124,7 +126,7 @@ const SearchResult = () => {
                 <ReactPlayer
                     url={`https://www.youtube.com/watch?v=${videoData.key}-U`}
                     playing={true}
-                    width="100%"
+                    width= "60%"
                     height="100%"
                     controls={true}
                     className="youtube-container"
@@ -162,7 +164,7 @@ const SearchResult = () => {
     return (
         <div
             style={{
-                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${backdropPath}${searchedMovie.backdrop_path})`,
+                backgroundImage: `linear-gradient(to bottom, rgba(22, 21, 21, 0), rgba(0, 0, 0, 1)), url(${backdropPath}${searchedMovie.backdrop_path})`,
             }}
             className="MainBackGround"
         >
@@ -248,7 +250,7 @@ const SearchResult = () => {
                     className="close-bttn"
                     onClick={() => setPlayTrailer(false)}
                 >
-                    Close Trailer
+                    Fermer Bande d'Annonce
                 </button>
             </div>
 
