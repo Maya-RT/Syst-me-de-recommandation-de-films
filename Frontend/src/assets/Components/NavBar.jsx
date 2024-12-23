@@ -19,17 +19,15 @@ const NavBar = ({ isHome }) => {
             />
             {/* if isHome then the button is the return button else it's the home button */}
             {isHome ? (
-                <a href="/" className="header-btn1 bouncy">
-                    <i className="fas fa-home"></i> Home
+                <a href="/home" className="header-btn1 bouncy">
+                    <i className="fas fa-home"></i> Nouvelle Recherche
                 </a>
             ) : (
                 <a
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
+                    href="/"
                     className="header-btn1 bouncy"
                 >
-                    <i className="fa-brands fa-github"></i> Retour
+                    <i className="fa-brands fa-github"></i> Page d'Acceuil
                 </a>
             )}
         </div>

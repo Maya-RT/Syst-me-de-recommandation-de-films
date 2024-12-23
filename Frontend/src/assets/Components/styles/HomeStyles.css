@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Cairo');
 .HomePage {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.35)),
         url("../media/movie-theatre.jpg");
@@ -16,18 +15,23 @@ body {
     margin: 0;
 }
 .HomeSearch {
-    margin-top: 10vh;
+    margin-top: 13vh;
 }
 .container-fluid {
     padding: 0;
 }
 .mt-4{
-    font-family: "Henny Penny";
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 70px;
+    font-size: 80px;
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    background-size: cover;
 }
 
 

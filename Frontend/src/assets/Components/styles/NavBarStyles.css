@@ -10,11 +10,11 @@
 }
 .logo-alt{
     width: 11rem;
-    height: 3.5rem;
+    height: 3rem;
     border-radius: 10px;
     margin-bottom: 2rem;
     border: none;
-    box-shadow: 0px 0px 65px 50px rgba(255,255,255,1)
+    opacity: 0;
   }
 @keyframes bouncy {
     0% {
@@ -50,10 +50,11 @@
     border-radius: 0.3em;
     float: right;
     font-weight: 600;
-    padding: 6px 15px;
+    padding: 8px 15px;
     background: #d62828;
     font-family: "Merriweather", sans-serif;
     font-weight: 400;
+    margin-right: 15rem;
 }
 .header-btn2 {
     background-color: transparent;
@@ -64,6 +65,7 @@
     display: flex;
     align-items:  center;
     justify-content: space-around;
+    flex-direction: row-reverse;
 }
 
 @media (max-width: 650px) {

@@ -34,12 +34,12 @@
 .topTitle-Movie {
     font-weight: 700;
     font-size: 2.75rem;
-    width: 50%;
+    margin: auto 0;
 }
 .main-img {
     height: 420px;
     box-shadow: rgba(0, 0, 0, 0.75) 46px 27px 11px -1px;
-    margin-right: 15rem;
+    margin-right: 9rem;
     margin-top: 15%;
 }
 
@@ -49,10 +49,7 @@
     margin-top: 4.5%;
 }
 .RecommendHeading {
-    color: #fff;
     font-family: "Merriweather";
-    padding-left: 15px;
-    margin-bottom: 20px;
 }
 
 .trailer-bttn {

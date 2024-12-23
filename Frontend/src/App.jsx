@@ -1,16 +1,18 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./assets/Home"; // Composant principal de la page d'accueil
-import SearchResult from "./assets/SearchResult"; // Composant pour la page de recherche
+import Home from "./assets/Home"; 
+import SearchResult from "./assets/SearchResult"; 
+import LandingPage from "./assets/LandingPage";
+
 
 function App() {
   return (
     <div className="App">
             <Router>
                 <Routes>
-                    <Route exact path="/" element={<Home />} />
+                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/home" element={<Home />} />
                     <Route
-                        exact
                         path="/search/:id"
                         element={<SearchResult />}
                     />

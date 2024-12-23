@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+.landing-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que la vidéo couvre tout l'écran */
+    z-index: -1; /* Met la vidéo en arrière-plan */
+  }
+.lan-content{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.lan-title{
+    background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+font-size: 8rem;
+font-family: "Source Sans Pro", sans-serif;
+animation: reveal 3000ms ease-in-out forwards 200ms,
+   glow 2500ms linear infinite 2000ms;
+}
+@keyframes reveal {
+80%{
+letter-spacing: 8px;
+}
+100% {
+background-size: 300% 300%;
+}
+}
+@keyframes glow {
+40% {
+text-shadow: 0 0 8px #fff;
+}
+}
+
+@property --pos-x {
+    syntax: '<percentage>';
+    initial-value: 11.14%;
+    inherits: false;
+  }
+  
+  @property --pos-y {
+    syntax: '<percentage>';
+    initial-value: 140%;
+    inherits: false;
+  }
+  
+  @property --spread-x {
+    syntax: '<percentage>';
+    initial-value: 150%;
+    inherits: false;
+  }
+  
+  @property --spread-y {
+    syntax: '<percentage>';
+    initial-value: 180.06%;
+    inherits: false;
+  }
+  
+  @property --color-1 {
+    syntax: '<color>';
+    initial-value: #000;
+    inherits: false;
+  }
+  
+  @property --color-2 {
+    syntax: '<color>';
+    initial-value: #08012C;
+    inherits: false;
+  }
+  
+  @property --color-3 {
+    syntax: '<color>';
+    initial-value: #4E1E40;
+    inherits: false;
+  }
+  
+  @property --color-4 {
+    syntax: '<color>';
+    initial-value: #70464E;
+    inherits: false;
+  }
+  
+  @property --color-5 {
+    syntax: '<color>';
+    initial-value: #88394C;
+    inherits: false;
+  }
+  
+  @property --stop-1 {
+    syntax: '<percentage>';
+    initial-value: 37.35%;
+    inherits: false;
+  }
+  
+  @property --stop-2 {
+    syntax: '<percentage>';
+    initial-value: 61.36%;
+    inherits: false;
+  }
+  
+  @property --stop-3 {
+    syntax: '<percentage>';
+    initial-value: 78.42%;
+    inherits: false;
+  }
+  
+  @property --stop-4 {
+    syntax: '<percentage>';
+    initial-value: 89.52%;
+    inherits: false;
+  }
+  
+  @property --stop-5 {
+    syntax: '<percentage>';
+    initial-value: 100%;
+    inherits: false;
+  }
+  
+  .lan-button {
+    border-radius: 11px;
+    border: none;
+    padding: 16px 32px;
+      min-width: 120px;
+    font-size: 20px;
+      line-height: 1;
+    font-weight: 500;
+      font-family: inherit;
+    color: white;
+    position: relative;
+    cursor: pointer;
+      appearance: none;
+    background: radial-gradient(
+      var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+      var(--color-1) var(--stop-1),
+      var(--color-2) var(--stop-2),
+      var(--color-3) var(--stop-3),
+      var(--color-4) var(--stop-4),
+      var(--color-5) var(--stop-5)
+    );
+      text-shadow: 0 .5px 1px rgba(0, 0, 0, .75);
+    box-shadow: 0 0 0 1px inset rgba(255, 255, 255, 0.1);
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    transition: 
+      --pos-x 0.5s,
+      --pos-y 0.5s,
+      --spread-x 0.5s,
+      --spread-y 0.5s,
+      --color-1 0.5s ,
+      --color-2 0.5s ,
+      --color-3 0.5s ,
+      --color-4 0.5s ,
+      --color-5 0.5s ,
+      --stop-1 0.5s ,
+      --stop-2 0.5s ,
+      --stop-3 0.5s ,
+      --stop-4 0.5s ,
+      --stop-5 0.5s;
+  }
+  
+  .lan-button:hover {
+    --pos-x: 0%;
+    --pos-y: 91.51%;
+    --spread-x: 120.24%;
+    --spread-y: 103.18%;
+    
+    --color-1: #C96287;
+    --color-2: #C66C64;
+    --color-3: #CC7D23;
+    --color-4: #37140A;
+    --color-5: #000;
+    
+    --stop-1: 0%;
+    --stop-2: 8.8%;
+    --stop-3: 21.44%;
+    --stop-4: 71.34%;
+    --stop-5: 85.76%;
+  }
+
+

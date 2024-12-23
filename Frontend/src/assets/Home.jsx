@@ -23,7 +23,7 @@ const Home = () => {
                 <h1 className="mt-4">Le Moviegator</h1>
                 <div className="HomeSearch">
                     {/*Rendering the searchbar */}
-                    <SearchBar movies={list} placeholder="Cherchez un film" />
+                    <SearchBar movies={list} placeholder="Chercher un film..." />
                 </div>
 
                
