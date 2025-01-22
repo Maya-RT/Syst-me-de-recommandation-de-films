@@ -7,7 +7,7 @@ import ReactPlayer from "react-player";
 
 const SearchResult = () => {
     const params = useParams();
-    const apiKey = "api_key=7212cc714eacf62263334b404a1fc587";
+    "Ici il faut placer une const apiKey avec la clef TMDB"
     const inputValue = params.id; // retrieving the searched movie name
     const [searchedMovie, setSearchedMovie] = useState({});
     const [recommendedMovies, setRecommendedMovies] = useState([{}]);
@@ -34,7 +34,7 @@ const SearchResult = () => {
                 (vid) => vid.language === "fr" && vid.name === "Official Trailer"
             );
     
-            // Si une bande-annonce en français existe, utilise-la
+            // Si une bande-annonce en français existe, on l'utilise
             setVideoData(frenchTrailer ? frenchTrailer : data.videos.results[0]);
         }
     };
@@ -42,7 +42,7 @@ const SearchResult = () => {
     const gotRecommendedData = (apiData) => {
         setRecommendedMovies([]);
         let counter = 16;
-        // getting data for each of the recommened movies
+        // recupérer les infos pour les films recommandés
         for (let movie of apiData.movies) {
             fetch(
                 `https://api.themoviedb.org/3/search/movie?${apiKey}&query=${movie}&language=fr`
@@ -76,7 +76,7 @@ const SearchResult = () => {
                         // Find the director in the crew
                         const director = data.crew.find(member => member.job === "Director");
                         if (director) {
-                            setDirector(director.name); // Affiche le nom du réalisateur
+                            setDirector(director.name); 
                         }
                     })
                 );
@@ -97,7 +97,7 @@ const SearchResult = () => {
             fetch(`/api/similarity/${inputValue}`).then((Response) =>
                 Response.json().then((data) => gotRecommendedData(data))
             );
-            // getting the list of all genres
+            
             fetch(
                 `https://api.themoviedb.org/3/genre/movie/list?${apiKey}&language=fr`
             ).then((Response) =>
@@ -188,7 +188,7 @@ const SearchResult = () => {
                             </p>
                             
                             <div className="casting">
-                                {/* Affiche le nom du réalisateur en premier */}
+                                {/* Affiche le nom du réalisateur */}
                                 {director && (
                                     <p><b>Réalisateur:</b> {director}</p>
                                     )}
