@@ -16,16 +16,23 @@ Nous avons commencé par une **étude de marché sur le secteur du cinéma dans 
 
 Nous avons conçu un tableau de bord interactif sous Power BI pour analyser le monde du cinéma à l’échelle mondiale :
 
-### Page 1 : 🎭 Acteurs & métiers du cinéma  
+### Page 1 : 🎭 Acteurs & métiers du cinéma
+
+Grâce au filtres "décennie" et "genre", cette première page montre les acteurs qui ont été le plus présents par décenie ainsi que leurs charactéristiques.
+Queleques exempeles de KPI présents:
 - Âge moyen des acteurs et actrices  
 - Acteur le plus présent par décennie  
 - Métiers secondaires des acteurs
-- Ainsi que d'autres KPIs  
+
+![Dash_actors](https://github.com/Maya-RT/Syst-me-de-recommandation-de-films/blob/2b2678ee730bfe009295ee1910c3b4afb4db9df0/Frontend/src/assets/Components/media/dashboard_cinema1.png) 
 
 ### Page 2 : 🎞️ Films  
 - Durée moyenne des films par décennie  
 - Note médiane des films  
-- Filtres par décennie et genre  
+- Filtres par décennie et genre
+- ...
+
+![Dash_movies](https://github.com/Maya-RT/Syst-me-de-recommandation-de-films/blob/2b2678ee730bfe009295ee1910c3b4afb4db9df0/Frontend/src/assets/Components/media/dashboard_cinema2.png)
 
 
 ---
